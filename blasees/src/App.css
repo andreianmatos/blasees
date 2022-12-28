@@ -1,5 +1,27 @@
 .App {
   text-align: center;
+  background-color: rgb(250,250,250)  ;
+}
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2ebe5; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #555; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 .App-logo {
@@ -14,14 +36,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
