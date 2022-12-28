@@ -1,11 +1,11 @@
 import '../App.css';
 import React from 'react';
-import Images from './Images';
+import Collage from './Collage';
 
 function Home() {
     return(
         <div className='Home'>
-            <Images />
+            <Collage />
         </div>
     )
 }
