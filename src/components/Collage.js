@@ -20,64 +20,22 @@ import pol14 from '../assets/collagePol/14.jpg';
 
 function Collage() {
     return(
-        <div className='Collage'>
-        
-          <div className="Text">
-            <Parallax 
-              translateX={['-800px', '0px']}
-              scale={[0.75, 1]}
-              rotate={[-180, 0]}
-              easing="easeInQuad"
-              >
-              <div className="textDiv" id="text1">a little thought</div>
-            </Parallax>
-
-            <Parallax 
-              translateX={['100%', '-100%']}
-              easing="easeInQuad"
-            >
-              <div className="textDiv" id="text2">another thought coming through</div>
-            </Parallax>
-
-            <Parallax 
-              translateX={['50%', '500%']}
-              easing="easeInQuad"
-            >
-            <div  className="textDiv" id="text3">
-              This text is enclosed in a box. This text is enclosed in a box. This text is enclosed in a box.
-            </div>
-            </Parallax>
-
-          </div>
-
+        <div className='Collage' id='Collage'
+          style= {{
+            height: '100vh;'
+          }}
+        >
           <MouseParallaxContainer
-            className="parallax"
+            className="parallaxImages overlap"
             containerStyle={{
-              width: "100%",
               display: "grid",
               gridAutoFlow: "column",
               overflow: "visible",
-              gridTemplateColumns: "auto auto auto auto auto"
             }}
             globalFactorX={0.3}
             globalFactorY={0.3}
             resetOnLeave
           >
-            <MouseParallaxChild
-              factorX={0.6}
-              factorY={0.1}
-              style={{
-                backgroundPositionY: "25%",
-                transform: "scale(1.2)",
-                position: "flex",
-                filter: "blur(4px) brightness(25%)",
-                backgroundSize: "auto",
-                backgroundRepeat: "repeat",
-                width: "100%",
-                height: "100%",
-                backfaceVisibility: "hidden"
-              }}
-            />
             <MouseParallaxChild
               factorX={0.5}
               factorY={0.5}
@@ -93,7 +51,7 @@ function Collage() {
               <img height="30%" src={pol1} alt="" />
             </MouseParallaxChild>
             <MouseParallaxChild
-              factorX={0.7}
+              factorX={0.5}
               factorY={0.5}
               style={{
                 //filter: "invert(1)",
@@ -104,10 +62,10 @@ function Collage() {
                 height: "100%"
               }}
             >
-              <img height="50%" src={pol2} alt="" />
+              <img height="30%" src={pol2} alt="" />
             </MouseParallaxChild>
             <MouseParallaxChild
-              factorX={0.9}
+              factorX={0.5}
               factorY={0.5}
               style={{
                 //filter: "invert(1)",
@@ -121,7 +79,7 @@ function Collage() {
               <img height="30%" src={pol3} alt="" />
             </MouseParallaxChild>
             <MouseParallaxChild
-              factorX={0.7}
+              factorX={0.5}
               factorY={0.5}
               style={{
                 //filter: "invert(1)",
@@ -275,7 +233,12 @@ function Collage() {
               <img height="30%" src={pol14} alt="" />
             </MouseParallaxChild>
           </MouseParallaxContainer>
+
+        <div className='Text'>
+
         </div>
+      
+      </div>
     )
 }
 
