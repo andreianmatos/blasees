@@ -38,6 +38,16 @@ function Collage() {
             >
               <div className="textDiv" id="text2">another thought coming through</div>
             </Parallax>
+
+            <Parallax 
+              translateX={['50%', '500%']}
+              easing="easeInQuad"
+            >
+            <div  className="textDiv" id="text3">
+              This text is enclosed in a box. This text is enclosed in a box. This text is enclosed in a box.
+            </div>
+            </Parallax>
+
           </div>
 
           <MouseParallaxContainer
@@ -94,7 +104,7 @@ function Collage() {
                 height: "100%"
               }}
             >
-              <img height="30%" src={pol2} alt="" />
+              <img height="50%" src={pol2} alt="" />
             </MouseParallaxChild>
             <MouseParallaxChild
               factorX={0.9}
