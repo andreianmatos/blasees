@@ -12,7 +12,7 @@ function Photograph() {
     return(
         <div className='Photograph' id='Photograph'
           style= {{
-            height: '100vh;'
+            height: '100%;'
           }}
         >
         

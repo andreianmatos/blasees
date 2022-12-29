@@ -22,7 +22,7 @@ function Collage() {
     return(
         <div className='Collage' id='Collage'
           style= {{
-            height: '100vh;'
+            height: '100%;'
           }}
         >
           <MouseParallaxContainer

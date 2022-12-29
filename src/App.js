@@ -4,15 +4,18 @@ import Home from './components/Home';
 import Collage from './components/Collage';
 import Photograph from './components/Photograph';
 import Topbar from './components/Topbar';
+import Words from './components/Words';
 
 function App() {
   return (
     <ParallaxProvider scrollAxis="horizontal">
-      <div className="App" >
+      <div className="App" 
+      >
         <Topbar />
         <Home />
         <Collage />
         <Photograph />
+        <Words />
       </div>
     </ParallaxProvider>
   );

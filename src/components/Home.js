@@ -5,39 +5,44 @@ import {Parallax} from "react-scroll-parallax";
 function Home() {
     return(
         <div className='Home' id='About'
-            style= {{
-                height: '100vh;'
-            }}
-          >
-        
+          style= {{
+            height: "100%",
+          }}
+        >
+          <Parallax 
+              easing="easeInQuad"
+              >
+              <div class="shape_box">
+                <div class="left"></div>
+                <div class="right"></div>
+                <p> ANDREIA MATOS </p>
+                <p> i have no idea how to define myself or what to write here but i really should figure something out cos it would look nice i suppose maybe it wouldnt who knows I wish it was looking properly round and not like this but i am tired if i keep wrting it looks more and more round thats cool means i have to do some longggg text huh </p>
+              </div>
+            </Parallax>
+
             <Parallax 
-              translateX={['-800px', '0px']}
-              scale={[0.75, 1]}
-              rotate={[-180, 0]}
               easing="easeInQuad"
               >
               <div 
                 className="textDiv" 
-                id="text1"
+                id="links"
                 >
-                 chance
-                </div>
-            </Parallax>
-
-            <Parallax 
-              translateX={['100%', '-100%']}
-              easing="easeInQuad"
-            >
-              <div className="textDiv" id="text2">passing thoughts</div>
-            </Parallax>
-
-            <Parallax 
-              translateX={['50%', '500%']}
-              easing="easeInQuad"
-            >
-            <div  className="textDiv" id="text3">
-              This text is enclosed in a box. This text is enclosed in a box. This text is enclosed in a box.
-            </div>
+                  <p>
+                  <a id="linkedIn" href='https://www.linkedin.com/in/andreianmatos/' target="_blank"  rel="noreferrer">
+                    linkedin
+                  </a>
+                  </p>
+                  <p>
+                  <a id="instagram" href='https://www.instagram.com/blasees/' target="_blank"  rel="noreferrer">
+                    instagram
+                  </a>
+                  </p>
+                  <p>
+                  <a id="soundcloud" href='https://soundcloud.com/blasees' target="_blank"  rel="noreferrer">
+                    soundcloud
+                  </a>
+                  </p>
+              </div>
             </Parallax>
 
           </div>
