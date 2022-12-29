@@ -4,7 +4,7 @@ import {Parallax} from "react-scroll-parallax";
 
 function Home() {
     return(
-        <div className='Home' id='Home'
+        <div className='Home' id='About'
             style= {{
                 height: '100vh;'
             }}

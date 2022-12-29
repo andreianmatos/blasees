@@ -3,7 +3,7 @@ import React from 'react';
 export const TopbarData = [
     {
         n: 0,
-        title: "Home",
+        title: "About",
         link: "/Home",
     },
     {
