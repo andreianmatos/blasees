@@ -44,7 +44,7 @@ a:hover {
 
 /* selected link */
 a:active {
-  color: darkred;
+  color: black;
 }
 
 /* TopbarMenu */
@@ -100,6 +100,24 @@ a:active {
   width:60vmin; 
   height:60vmin; 
   text-align: left;
+  z-index: 999;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+button:hover {
+  color: darkred;
+}
+/* selected link */
+button:active {
+  color: darkred;
 }
 
 .overlap{

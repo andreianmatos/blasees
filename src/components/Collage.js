@@ -17,15 +17,11 @@ import pol11 from '../assets/collagePol/11.jpg';
 import pol12 from '../assets/collagePol/12.jpg';
 import pol13 from '../assets/collagePol/13.jpg';
 import pol14 from '../assets/collagePol/14.jpg';
-import { NoEncryption } from '@mui/icons-material';
-
-var currentSection = false;
 
 function showSection(chosenSection) {
-  currentSection = chosenSection;
-  document.getElementById('section1').style.display = "none";
-  document.getElementById('section2').style.display = "none";
-  document.getElementById(chosenSection).style.display = "block";
+  document.getElementsByClassName("parallax collage")[0].style.display = "none";
+  document.getElementsByClassName("parallax collage")[1].style.display = "none";
+  document.getElementsByClassName("parallax collage")[chosenSection-1].style.display = "grid";
 }
 
 function Collage() {
@@ -33,27 +29,25 @@ function Collage() {
         <div className='Collage' id='COLLAGES'
           style= {{
             height: '100%;',
-            display: "none"
+            display: "none;"
           }}
         >
           
           <div className='sections'>
 
-              <span onClick="showSection('section1');">
-                <em>i</em>&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-              <span onClick="showSection('section2');">
-                <em>ii</em>&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
+              <button onClick={() => showSection(1)}>
+                <em>one</em>&nbsp;&nbsp;&nbsp;&nbsp;
+              </button>
+              <button  onClick={() => showSection(2)}>
+                <em>two</em>&nbsp;&nbsp;&nbsp;&nbsp;
+              </button>
 
           </div>
 
-          <div id='section1' styles={{display: "none;"}}>
-
             <MouseParallaxContainer
-              className="parallaxImages overlap"
+              className="parallax collage"
               containerStyle={{
-                display: "grid",
+                display: "none",
                 gridAutoFlow: "column",
                 overflow: "visible",
               }}
@@ -259,14 +253,10 @@ function Collage() {
               </MouseParallaxChild>
             </MouseParallaxContainer>
         
-        </div>
-
-        <div id='section2' styles={{display: "none;"}}>
-
             <MouseParallaxContainer
-              className="parallaxImages overlap"
+              className="parallax collage"
               containerStyle={{
-                display: "grid",
+                display: "none",
                 gridAutoFlow: "column",
                 overflow: "visible",
               }}
@@ -471,9 +461,7 @@ function Collage() {
                 <img height="30%" src={pol14} alt="" />
               </MouseParallaxChild>
             </MouseParallaxContainer>
-        
-        </div>
-      
+              
       </div>
     )
 }
