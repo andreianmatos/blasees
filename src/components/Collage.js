@@ -32,7 +32,7 @@ function Collage() {
         <div className='Collage' id='COLLAGES'
           style= {{
             height: '100%;',
-            display: "none;"
+            display: "none"
           }}
         >
           
