@@ -8,22 +8,14 @@ import selfPortrait from '../assets/about/selfPortrait.jpg';
 
 function sketch(p5) {
 
-  let w = 400;
-  let text = ",";
-  let f = 0;
-
   p5.setup = () => {
-    p5.createCanvas(500, 500);
   }
 
   p5.draw = () => {
-    for(let i = 0; i < p5.width; i += 10){
-      for(let j = 0; j < p5.height; j += 10){
-        p5.fill(p5.int(p5.noise(i/200, j/200, p5.frameCount/100) * 255 / 50) * 50);
-        p5.text(text.charAt(p5.noise(i/w, j/w*10.0) * p5.noise(f/60)*10), i, j);
-      }     
-   }
+
   }
+
+  <ReactP5Wrapper sketch={sketch} />//THIS DOWN
 
 }
 
@@ -34,15 +26,8 @@ function Home() {
             height: "100%"
           }}
         >
-          <div 
-            style={{
-              display: "absolute",
-              top:"10%;",
-            }}
-          >
-            <ReactP5Wrapper sketch={sketch} />
-          </div>
 
+          
           <Parallax 
               easing="easeInQuad"
               >
