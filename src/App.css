@@ -82,12 +82,12 @@ a:active {
 }
 
 #active {
-  color: gray !important;
+  color: darkred !important;
 }
 
 .row #title:hover {
   cursor: pointer;
-  color: gray;
+  color: darkred;
 }
 
 /* COLLAGE */

@@ -19,8 +19,11 @@ import pol13 from '../assets/collagePol/13.jpg';
 import pol14 from '../assets/collagePol/14.jpg';
 
 function showSection(chosenSection) {
+  document.getElementById("sectionbutton1").style.color = "black";
+  document.getElementById("sectionbutton2").style.color = "black";
   document.getElementsByClassName("parallax collage")[0].style.display = "none";
   document.getElementsByClassName("parallax collage")[1].style.display = "none";
+  document.getElementById("sectionbutton"+chosenSection).style.color = "darkred";
   document.getElementsByClassName("parallax collage")[chosenSection-1].style.display = "grid";
 }
 
@@ -35,10 +38,10 @@ function Collage() {
           
           <div className='sections'>
 
-              <button onClick={() => showSection(1)}>
+              <button id="sectionbutton1" onClick={() => showSection(1)}>
                 <em>one</em>&nbsp;&nbsp;&nbsp;&nbsp;
               </button>
-              <button  onClick={() => showSection(2)}>
+              <button id="sectionbutton2" onClick={() => showSection(2)}>
                 <em>two</em>&nbsp;&nbsp;&nbsp;&nbsp;
               </button>
 
