@@ -1,49 +1,48 @@
+import { imageListClasses } from '@mui/material';
 import '../App.css';
 import React from 'react';
 import {Parallax} from "react-scroll-parallax";
 
+import selfPortrait from '../assets/about/selfPortrait.jpg'; 
+
 function Home() {
     return(
-        <div className='Home' id='About'
+        <div className='Home' id='ABOUT'
           style= {{
-            height: "100%",
+            height: "100%"
           }}
         >
+          
           <Parallax 
               easing="easeInQuad"
               >
-              <div class="shape_box">
-                <div class="left"></div>
-                <div class="right"></div>
-                <p> ANDREIA MATOS </p>
-                <p> i have no idea how to define myself or what to write here but i really should figure something out cos it would look nice i suppose maybe it wouldnt who knows I wish it was looking properly round and not like this but i am tired if i keep wrting it looks more and more round thats cool means i have to do some longggg text huh </p>
-              </div>
-            </Parallax>
+              <img id="introImage" style={{width: "35%"}} src={selfPortrait} alt="" />
+          </Parallax>
 
-            <Parallax 
+          <Parallax 
               easing="easeInQuad"
               >
-              <div 
-                className="textDiv" 
-                id="links"
-                >
-                  <p>
+              <div className ="textDiv" id="introText">
+                <p><b> ANDREIA MATOS </b></p>
+                <p> b. 1999 </p>
+                <p> lives in Lisboa, Portugal </p>
+                <p><b> : </b></p>
+                <p>
                   <a id="linkedIn" href='https://www.linkedin.com/in/andreianmatos/' target="_blank"  rel="noreferrer">
-                    linkedin
+                    <em>linkedin</em>&nbsp;&nbsp;
                   </a>
-                  </p>
-                  <p>
-                  <a id="instagram" href='https://www.instagram.com/blasees/' target="_blank"  rel="noreferrer">
-                    instagram
+                  <a id="github" href='https://www.github.com/andreianmatos/' target="_blank"  rel="noreferrer">
+                    <em>github</em>&nbsp;&nbsp;
                   </a>
-                  </p>
-                  <p>
+                  <a id="instagram" href='https://www.instagram.com/blaseez/' target="_blank"  rel="noreferrer">
+                    <em>instagram</em>&nbsp;&nbsp;
+                  </a>
                   <a id="soundcloud" href='https://soundcloud.com/blasees' target="_blank"  rel="noreferrer">
-                    soundcloud
+                    <em>soundcloud</em>
                   </a>
-                  </p>
+                </p>
               </div>
-            </Parallax>
+            </Parallax>           
 
           </div>
 

@@ -7,8 +7,8 @@
 /* SCROLL BAR */
 
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 1vh;
+  height: 1vh;
   overflow-y: scroll;
   overflow-x: scroll;
 }
@@ -63,9 +63,10 @@ a:active {
 }
 
 .TopbarMenu {
+  font-size:2vh;
   display: none;
   padding: 0;
-  width: 98.7vw;
+  width: 99vw;
   border: 5px solid black;
   background-color: rgba(255, 255, 255, 0.902);
 }
@@ -75,7 +76,6 @@ a:active {
   list-style-type: none;
   color: black;
   align-items: center;
-  font-size: larger;
 }
 
 .row #title {
@@ -92,12 +92,30 @@ a:active {
 
 /* COLLAGE */
 
+.sections {
+  font-size:2vh;
+  position: absolute;
+  left: 20%;
+  margin-top: 10%;
+  width:60vmin; 
+  height:60vmin; 
+  text-align: left;
+}
+
 .overlap{
   position: relative;
 }
 
 .textCollage {
   position: relative;
+}
+
+.section1 {
+  display: none;
+}
+
+.section2 {
+  display: none;
 }
 
 /* TEXT */
@@ -115,45 +133,18 @@ a:active {
   font-size:2vh;
 }
 
-#introTextBefore {
-  font-size:3vh;
+#introText {
+  font-size:2vh;
   position: absolute;
-  left: 10%;
+  left: 60%;
   margin-top: 20%;
-  width: 10%;
-  height: 10%;
-  font-style:normal;
+  width:60vmin; 
+  height:60vmin; 
+  text-align: left;
 }
 
-#links {
-  font-size:3vh;
+#introImage {
   position: absolute;
-  left: 30%;
-  margin-top: 30%;
-  width: 5%;
-  height: 5%;
-  font-style: italic;
-}
-
-.shape_box{
-  left: 50%;
-  margin-top: 15%;
-  width:45vmin; 
-  height:45vmin; 
-  border-radius:50%;
-  position: absolute;
-  box-sizing:content-box;
-  overflow:hidden
-}
-.left{
-  float:left;
-  width:50%;
-  height:100%;
-  shape-outside:radial-gradient(circle farthest-corner at center right, rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255) 70%, white 100%);
-}
-.right{
-  float:right;
-  width:50%;
-  height:100%;
-  shape-outside:radial-gradient(circle farthest-corner at center left, rgba(255, 255, 255, 0) 70%, rgb(255, 255, 255) 70%, white 100%);
+  left: 20%;
+  margin-top: 20%;
 }

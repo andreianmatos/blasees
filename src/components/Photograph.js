@@ -10,9 +10,10 @@ import pho3 from '../assets/photographs/floresta.png';
 
 function Photograph() {
     return(
-        <div className='Photograph' id='Photograph'
+        <div className='Photograph' id='PHOTOGRAPHS'
           style= {{
-            height: '100%;'
+            height: '100%;',
+            display: "none"
           }}
         >
         
