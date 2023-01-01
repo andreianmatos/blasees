@@ -33,6 +33,7 @@ function Topbar() {
                                 document.getElementById('ABOUT').style.display = "none";
                                 document.getElementById('COLLAGES').style.display = "none";
                                 document.getElementById('PHOTOGRAPHS').style.display = "none";
+                                document.getElementById('DRAWINGS').style.display = "none";
                                 document.getElementById('WRITINGS').style.display = "none";
                                 document.getElementById(val.title).style.display = "block"; 
                                 document.getElementById(val.title).scrollIntoView({ 

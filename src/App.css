@@ -94,13 +94,14 @@ a:active {
 
 .sections {
   font-size:2vh;
-  position: absolute;
+  position: fixed;
   left: 20%;
   margin-top: 10%;
-  width:60vmin; 
-  height:60vmin; 
   text-align: left;
   z-index: 999;
+}
+
+.images {
 }
 
 button, input[type="submit"], input[type="reset"] {

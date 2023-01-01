@@ -5,6 +5,7 @@ import Collage from './components/Collage';
 import Photograph from './components/Photograph';
 import Topbar from './components/Topbar';
 import Words from './components/Words';
+import Drawings from './components/Drawings';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Home />
         <Collage />
         <Photograph />
+        <Drawings />
         <Words />
       </div>
     </ParallaxProvider>

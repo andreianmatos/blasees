@@ -2,6 +2,7 @@ import '../App.css';
 import React from 'react';
 import {MouseParallaxChild, MouseParallaxContainer} from "react-parallax-mouse";
 import {Parallax} from "react-scroll-parallax";
+import Carousel, { CarouselItem } from "./Carousel";
 
 import pol1 from '../assets/collagePol/1.jpg'; 
 import pol2 from '../assets/collagePol/2.jpg';
@@ -32,440 +33,54 @@ function Collage() {
         <div className='Collage' id='COLLAGES'
           style= {{
             height: '100%;',
-            display: "none"
+            display: "none",
+            position: "flex"
           }}
         >
           
           <div className='sections'>
 
               <button id="sectionbutton1" onClick={() => showSection(1)}>
-                <em>one</em>&nbsp;&nbsp;&nbsp;&nbsp;
+                <em>One</em>&nbsp;&nbsp;&nbsp;&nbsp;
               </button>
               <button id="sectionbutton2" onClick={() => showSection(2)}>
-                <em>two</em>&nbsp;&nbsp;&nbsp;&nbsp;
+                <em>Two</em>&nbsp;&nbsp;&nbsp;&nbsp;
               </button>
 
           </div>
 
-            <MouseParallaxContainer
-              className="parallax collage"
-              containerStyle={{
-                display: "none",
-                gridAutoFlow: "column",
-                overflow: "visible",
-              }}
-              globalFactorX={0.3}
-              globalFactorY={0.3}
-              resetOnLeave
-            >
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol1} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol2} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol3} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol4} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol5} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol6} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol7} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol8} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol9} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol10} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol11} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol12} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol13} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol14} alt="" />
-              </MouseParallaxChild>
-            </MouseParallaxContainer>
-        
-            <MouseParallaxContainer
-              className="parallax collage"
-              containerStyle={{
-                display: "none",
-                gridAutoFlow: "column",
-                overflow: "visible",
-              }}
-              globalFactorX={0.3}
-              globalFactorY={0.3}
-              resetOnLeave
-            >
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol1} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol2} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol3} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol4} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol5} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  //filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol6} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol7} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol8} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol9} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol10} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol11} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol12} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol13} alt="" />
-              </MouseParallaxChild>
-              <MouseParallaxChild
-                factorX={0.5}
-                factorY={0.5}
-                style={{
-                  filter: "invert(1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%"
-                }}
-              >
-                <img height="30%" src={pol14} alt="" />
-              </MouseParallaxChild>
-            </MouseParallaxContainer>
-              
+          <Carousel className='images'>
+            <CarouselItem>                
+              <img height="100%" src={pol1} alt="" />
+            </CarouselItem>
+            <CarouselItem>                
+              <img height="100%" src={pol2} alt="" />
+            </CarouselItem>
+            <CarouselItem>                
+              <img height="100%" src={pol3} alt="" />
+            </CarouselItem>
+            <CarouselItem>                
+              <img height="100%" src={pol4} alt="" />
+            </CarouselItem>
+            <CarouselItem>                
+              <img height="100%" src={pol5} alt="" />
+            </CarouselItem>
+            <CarouselItem>                
+              <img height="100%" src={pol6} alt="" />
+            </CarouselItem>
+            <CarouselItem>                
+              <img height="100%" src={pol7} alt="" />
+            </CarouselItem>
+            <CarouselItem>                
+              <img height="100%" src={pol8} alt="" />
+            </CarouselItem>
+            <CarouselItem>                
+              <img height="100%" src={pol9} alt="" />
+            </CarouselItem>
+          </Carousel>
+
       </div>
+
     )
 }
 

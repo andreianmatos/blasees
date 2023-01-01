@@ -18,6 +18,11 @@ export const TopbarData = [
     },
     {
         n: 3,
+        title: "DRAWINGS",
+        link: "/Drawings",
+    },
+    {
+        n: 4,
         title: "WRITINGS",
         link: "/Words",
     }

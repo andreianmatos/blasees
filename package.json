@@ -18,6 +18,7 @@
     "react-parallax": "^3.5.1",
     "react-parallax-component": "^1.0.6",
     "react-parallax-mouse": "^2.0.1",
+    "react-responsive-image-grid": "^1.1.0",
     "react-scripts": "5.0.1",
     "react-scroll-parallax": "^3.3.2",
     "web-vitals": "^2.1.4"
