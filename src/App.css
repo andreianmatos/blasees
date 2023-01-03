@@ -2,15 +2,17 @@
   text-align: center;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 /* SCROLL BAR */
 
 ::-webkit-scrollbar {
-  width: 1vh;
-  height: 1vh;
+  width: 2vh;
+  height: 2vh;
   overflow-y: scroll;
-  overflow-x: scroll;
+  overflow-x: hidden;
+  z-index: 9999;
 }
 
 ::-webkit-scrollbar-track {
@@ -51,31 +53,49 @@ a:active {
 
 .Topbar {
   position: fixed;
-  z-index: 9999;
+  z-index: 9995;
+  width: 100vw;
+}
+
+.buttonDiv {
+  position: -webkit-sticky;
+  position: sticky;
+  justify-content: center;
+  align-items: center;
 }
 
 .Topbar-btn {
-  display: block;
   background: transparent;
   mix-blend-mode: difference;
   outline: none;
   border: none;
+  width: 100vw;
+}
+
+.TopbarList {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+  column-count: 5;
+  column-gap: 2vw;
 }
 
 .TopbarMenu {
   font-size:2vh;
   display: none;
   padding: 0;
-  width: 99vw;
-  border: 5px solid black;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  font-style: italic;
   background-color: rgba(255, 255, 255, 0.902);
+  z-index: 9995;
+  width: 99vw;
 }
 
-.TopbarMenu .row {
-  display: flex;
+.TopbarMenu .col {
   list-style-type: none;
   color: black;
-  align-items: center;
 }
 
 .row #title {
@@ -88,6 +108,21 @@ a:active {
 .row #title:hover {
   cursor: pointer;
   color: darkred;
+}
+
+@media only screen and (max-width: 600px) {
+  .TopbarMenu {
+    font-size:2vh;
+    display: none;
+    padding: 0;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.902);
+    z-index: 9995;
+    vertical-align: center;
+    justify-content: center;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+  } 
 }
 
 /* COLLAGE */
@@ -154,17 +189,14 @@ button:active {
 
 #introText {
   font-size:2vh;
-  position: absolute;
   z-index: 999;
-  left: 60%;
-  margin-top: 20%;
-  padding: 1%;
-  text-align: left;
+  padding: 20%;
+  text-align: center;
   background-color: rgba(255, 255, 255, 1);
 }
 
-#introImage {
-  position: absolute;
-  left: 20%;
-  margin-top: 20%;
+@media only screen and (max-width: 600px) {
+  #introImage {
+    width: 80%;
+  }
 }

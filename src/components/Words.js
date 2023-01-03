@@ -4,10 +4,9 @@ import {Parallax} from "react-scroll-parallax";
 
 function Words() {
     return(
-        <div className='Words' id='WRITINGS'
+        <div className='Words' id='writings'
           style= {{
             height: "100%",            
-            display: "none"
           }}
         >
 

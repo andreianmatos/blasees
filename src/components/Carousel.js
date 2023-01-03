@@ -84,7 +84,7 @@ const Carousel = ({ children }) => {
             updateIndex(activeIndex + 1);
           }}
         >
-          >
+          
         </button>
       </div>
     </div>

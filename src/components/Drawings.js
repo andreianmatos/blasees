@@ -23,10 +23,10 @@ function showSection(chosenSection) {
 
 function Drawings() {
     return(
-        <div className='Drawings' id='DRAWINGS'
+        <div className='Drawings' id='drawings'
           style= {{
             height: '100%;',
-            display: "none"
+            position: "flex"
           }}
         >
           

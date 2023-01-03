@@ -30,10 +30,9 @@ function showSection(chosenSection) {
 
 function Collage() {
     return(
-        <div className='Collage' id='COLLAGES'
+        <div className='Collage' id='collages'
           style= {{
             height: '100%;',
-            display: "none",
             position: "flex"
           }}
         >
@@ -51,13 +50,24 @@ function Collage() {
 
           <Carousel className='images'>
             <CarouselItem>                
-              <img height="100%" src={pol1} alt="" />
+              <img style={{
+                maxHeight: "80vh;",
+                maxWidth: "80vw;"
+                }} 
+                src={pol1} alt="" />
             </CarouselItem>
             <CarouselItem>                
-              <img height="100%" src={pol2} alt="" />
+              <img style={{
+                maxHeight: "80vh;",
+                maxWidth: "80vw;"
+                }}  src={pol2} alt="" />
             </CarouselItem>
             <CarouselItem>                
-              <img height="100%" src={pol3} alt="" />
+              <img style={{
+                maxHeight: "80vh;",
+                maxWidth: "80vw;"
+                }}  
+                src={pol3} alt="" />
             </CarouselItem>
             <CarouselItem>                
               <img height="100%" src={pol4} alt="" />

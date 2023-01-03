@@ -3,27 +3,27 @@ import React from 'react';
 export const TopbarData = [
     {
         n: 0,
-        title: "ABOUT",
+        title: "home",
         link: "/Home",
     },
     {
         n: 1,
-        title: "COLLAGES",
+        title: "collages",
         link: "/Collage",
     },
     {
         n: 2,
-        title: "PHOTOGRAPHS",
+        title: "photographs",
         link: "/Photograph",
     },
     {
         n: 3,
-        title: "DRAWINGS",
+        title: "drawings",
         link: "/Drawings",
     },
     {
         n: 4,
-        title: "WRITINGS",
+        title: "writings",
         link: "/Words",
     }
 ]
