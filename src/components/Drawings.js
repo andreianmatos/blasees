@@ -13,6 +13,7 @@ import draw7 from '../assets/drawings/7.jpg';
 import draw8 from '../assets/drawings/8.jpg';
 import draw9 from '../assets/drawings/9.jpg';
 
+
 function showSection(chosenSection) {
   document.getElementById("sectionbutton1").style.color = "black";
   document.getElementById("sectionbutton2").style.color = "black";
@@ -25,7 +26,7 @@ function Drawings() {
     return(
         <div className='Drawings' id='drawings'
           style= {{
-            height: '100%;',
+            height: '100%',
             position: "flex"
           }}
         >

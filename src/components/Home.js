@@ -23,7 +23,7 @@ function Home() {
     return(
         <div className='Home' id='home'
           style= {{
-            height: "100%",
+            height: "100vh",
             position: "flex"
           }}
         >
