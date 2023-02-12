@@ -30,6 +30,9 @@ function showSection(chosenSection) {
   for (let i = 0; i < document.getElementsByClassName("gallery-container").length; i++) {
     document.getElementsByClassName("gallery-container")[i].style.display = "none";
   }
+  for (let i = 1; i < document.getElementsByClassName("gallery-container").length; i++) {
+    document.getElementsByClassName("gallery-container")[i].style.visibility = "visible";
+}
   document.getElementById("sectionbutton"+chosenSection).style.color = "darkred";
   document.getElementsByClassName("gallery-container")[chosenSection-1].style.display = "grid";
 }
@@ -224,12 +227,12 @@ function Collage() {
             <Gallery className="gallery" images={images1} />
 
         </div>
-        <div className="gallery-container" style={{display:"none"}}>
+        <div className="gallery-container" style={{visibility:"hidden"}}>
 
             <Gallery className="gallery" images={images2} />
 
         </div>
-        <div className="gallery-container" style={{display:"none"}}>
+        <div className="gallery-container" style={{visibility:"hidden"}}>
 
             <Gallery className="gallery" images={images3} />
 
