@@ -17,7 +17,6 @@ function App() {
         <Collage />
         <Photograph />
         <Drawings />
-        <Words />
       </div>
     </ParallaxProvider>
   );

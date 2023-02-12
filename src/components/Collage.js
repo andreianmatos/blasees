@@ -1,14 +1,7 @@
 import '../App.css';
 import React from 'react';
-import {MouseParallaxChild, MouseParallaxContainer} from "react-parallax-mouse";
-import {Parallax} from "react-scroll-parallax";
-import Carousel, { CarouselItem } from "./Carousel";
 
-import Slider from "react-slick";
-
-import ImageGallery from 'react-image-gallery';
-//import "react-image-gallery/styles/css/image-gallery.css";
-
+import { Gallery } from "react-grid-gallery";
 
 import pol1 from '../assets/collagePol/1.jpg'; 
 import pol2 from '../assets/collagePol/2.jpg';
@@ -26,75 +19,182 @@ import pol13 from '../assets/collagePol/13.jpg';
 import pol14 from '../assets/collagePol/14.jpg';
 
 import shade1 from '../assets/shade/1.jpg'; 
+import shade2 from '../assets/shade/2.jpg'; 
+import shade3 from '../assets/shade/3.jpg'; 
+
 
 function showSection(chosenSection) {
   document.getElementById("sectionbutton1").style.color = "black";
   document.getElementById("sectionbutton2").style.color = "black";
-  console.log(document.getElementsByClassName("carouselCollage"))
-  document.getElementsByClassName("carouselCollage")[0].style.display = "none";
-  document.getElementsByClassName("carouselCollage")[1].style.display = "none";
+  document.getElementById("sectionbutton3").style.color = "black";
+  for (let i = 0; i < document.getElementsByClassName("gallery-container").length; i++) {
+    document.getElementsByClassName("gallery-container")[i].style.display = "none";
+  }
   document.getElementById("sectionbutton"+chosenSection).style.color = "darkred";
-  document.getElementsByClassName("carouselCollage")[chosenSection-1].style.display = "grid";
+  document.getElementsByClassName("gallery-container")[chosenSection-1].style.display = "grid";
 }
 
 function Collage() {
 
     const images1 = [
-      {
-        original: pol1,
-        thumbnail: pol1,
-      },
-      {
-        original: pol2,
-        thumbnail: pol2,
-      },
-      {
-        original: pol3,
-        thumbnail: pol3,
-      },
-      {
-        original: pol4,
-        thumbnail: pol4,
-      },
-      {
-        original: pol5,
-        thumbnail: pol5,
-      },
-      {
-        original: pol6,
-        thumbnail: pol6,
-      },
-    ];
+        {
+          src: pol1,
+          width: 500,
+          height: 500,
+        },
+        {
+            src: pol2,
+            width: 500,
+            height: 500,
+        },
+        {
+            src: pol3,
+            width: 500,
+            height: 500,
+        },
+        {
+            src: pol4,
+            width: 500,
+            height: 500,
+        },
+        {
+            src: pol5,
+            width: 500,
+            height: 500,
+        },
+        {
+            src: pol1,
+            width: 500,
+            height: 500,
+        },
+        {
+            src: pol2,
+            width: 500,
+            height: 500,
+        },
+        {
+            src: pol3,
+            width: 500,
+            height: 500,
+        },
+        {
+            src: pol4,
+            width: 500,
+            height: 500,
+        },
+        {
+            src: pol5,
+            width: 500,
+            height: 500,
+        },
+      ];
+  
+      const images2 = [
+        {
+            src: shade1,
+            width: 500,
+            height: 500,
+          },
+          {
+              src: shade2,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: shade3,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol4,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol5,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol1,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol2,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol3,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol4,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol5,
+              width: 500,
+              height: 500,
+          },
+      ];
+  
+      const images3 = [
+        {
+            src: pol1,
+            width: 500,
+            height: 500,
+          },
+          {
+              src: pol2,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol3,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol4,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol5,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol1,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol2,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol3,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol4,
+              width: 500,
+              height: 500,
+          },
+          {
+              src: pol5,
+              width: 500,
+              height: 500,
+          },
+      ];
 
-    const images2 = [
-      {
-        original: pol1,
-        thumbnail: pol1,
-      },
-      {
-        original: pol1,
-        thumbnail: pol2,
-      },
-      {
-        original: pol3,
-        thumbnail: pol3,
-      },
-    ];
-
-    const images3 = [
-      {
-        original: pol1,
-        thumbnail: pol1,
-      },
-      {
-        original: pol2,
-        thumbnail: pol2,
-      },
-      {
-        original: pol3,
-        thumbnail: pol3,
-      },
-    ];
 
     return(
         <div className='Collage' id='collages'
@@ -105,63 +205,35 @@ function Collage() {
           }}
         >
           
-          <div className='sections'>
+        <div className='sections'>
 
-              <button id="sectionbutton1" onClick={() => showSection(1)}>
-                <b><em>Preview</em></b>&nbsp;&nbsp;&nbsp;&nbsp;
-              </button>
-              <button id="sectionbutton1" onClick={() => showSection(2)}>
-                <b><em>One</em></b>&nbsp;&nbsp;&nbsp;&nbsp;
-              </button>
-              <button id="sectionbutton2" onClick={() => showSection(3)}>
-                <b><em>Two</em></b>&nbsp;&nbsp;&nbsp;&nbsp;
-              </button>
+            <button id="sectionbutton1" style= {{color:"darkred"}} onClick={() => showSection(1)}>
+            <b><em>One</em></b>&nbsp;&nbsp;&nbsp;&nbsp;
+            </button>
+            <button id="sectionbutton2" onClick={() => showSection(2)}>
+            <b><em>Two</em></b>&nbsp;&nbsp;&nbsp;&nbsp;
+            </button>
+            <button id="sectionbutton3" onClick={() => showSection(3)}>
+            <b><em>Three</em></b>
+            </button>
 
-          </div>
+        </div>
 
+        <div className="gallery-container">
 
-          <div  className="carouselWrap">
+            <Gallery className="gallery" images={images1} />
 
-            <div  className="carouselCollage">
+        </div>
+        <div className="gallery-container" style={{display:"none"}}>
 
-            <div  className="textConcept">
-              Collection of visuals.
-            </div>
+            <Gallery className="gallery" images={images2} />
 
-            <ImageGallery thumbnailPosition={"left"} showThumbnails={true} showNav={false} showPlayButton={false} items={images1} />
+        </div>
+        <div className="gallery-container" style={{display:"none"}}>
 
-          </div>
+            <Gallery className="gallery" images={images3} />
 
-          <div  className="carouselCollage"
-            style= {{
-              display:"none"
-            }}
-          >
-
-            <div  className="textConcept" >
-              Randomly generated collages out of a set of instant pictures.
-            </div>
-
-            <ImageGallery items={images2} />
-
-          </div>
-
-          <div  className="carouselCollage"
-            style= {{
-              display:"none"
-            }}
-          >
-
-            <div  className="textConcept" >
-              Randomly generated collages out of a set of instant pictures.
-            </div>
-
-            <ImageGallery items={images3} />
-
-          </div>
-
-      </div>
-
+        </div>
       </div>
 
     )

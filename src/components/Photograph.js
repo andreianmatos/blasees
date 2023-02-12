@@ -17,74 +17,7 @@ function Photograph() {
           }}
         >
         
-        <div className='photos'
-          style= {{
-            display: 'grid',
-            gridAutoFlow: "column"
-          }}
-        >
-
-          <MouseContainer
-            styles= {{
-              width: '100%',
-              height: '70vh',
-              flex: 1,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-            chasingElement={
-              <ChasingElement 
-                  styles={{
-                    
-                  }}
-              >
-                <img   style={{width: "40%"}} src={pho1} alt="" />
-              </ChasingElement>
-            }
-          />
-          <MouseContainer
-            styles= {{
-              width: '100%',
-              height: '70vh',
-              flex: 1,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}
-            chasingElement={
-              <ChasingElement 
-                  styles={{
-                    
-                  }}
-              >
-                <img   style={{width: "40%"}} src={pho2} alt="" />
-              </ChasingElement>
-            }
-          />
-        </div>
-
-        <MouseContainer
-          styles= {{
-            width: '100%',
-            height: '70vh',
-            flex: 1,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-          chasingElement={
-            <ChasingElement 
-                styles={{
-                   
-                }}
-            >
-              <img   style={{width: "50%"}} src={pho3} alt="" />
-            </ChasingElement>
-          }
-        />
-      
-      </div>
+         </div>
     )
 }
 
